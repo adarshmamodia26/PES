@@ -1,6 +1,6 @@
 // JavaScript Document
 describe('PES',function(){
-
+/*
 before(function() {
      cy.log('runs once before all tests in the block')
      
@@ -16,7 +16,7 @@ before(function() {
      cy.wait(50000)
      })
      
-})
+})*/
 
 describe('PES-URL',function(){
 

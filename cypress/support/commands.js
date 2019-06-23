@@ -23,3 +23,32 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+before(function() {
+     cy.log('runs once before all tests in the block')
+     cy.analyze()
+  })
+
+/*beforeEach(function() {
+   cy.log('runs before each test in the block')
+  })
+afterEach(function() {
+     cy.log('runs after each test in the block')
+  })
+after(function() {
+    cy.log('runs once after all tests in the block')
+  })*/
+  
+Cypress.Commands.add('analyze',function(){
+  //opening analyzer website
+     cy.readFile('Data/PES-Access.json').its('url').as('url').then((url)=>{
+     cy.visit(url)
+     })
+     
+     //Fetching website data which will be analysed
+     cy.readFile('Data/PES-Access.json').its('url-analyze').as('urlanalyze').then((urlanalyze)=>{
+     cy.get('#mat-input-1').type(urlanalyze).should('have.value',urlanalyze)
+     cy.get('body > app-root > div > app-home > div > form > mat-form-field > div > div.mat-form-field-flex > div > button >    span').click()
+     cy.wait(50000)
+     })
+})    
