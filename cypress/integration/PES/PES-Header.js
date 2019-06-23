@@ -152,9 +152,8 @@ it('Verifying that Final URL is a link',function(){
 cy.get('#website-Info > div > div.result-summary > div.url > ul > li:nth-child(2)').should('have.descendants','a')
 })
 
-
-
-
 })
+
+
 
 })
