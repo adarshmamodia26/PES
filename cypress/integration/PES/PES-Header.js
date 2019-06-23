@@ -18,6 +18,12 @@ before(function() {
      
 })*/
 
+before(function() {
+     cy.log('runs once before all tests in the block')
+     cy.analyze()
+  })
+
+
 describe('PES-URL',function(){
 
 it('Verify main URL include website url which will be analyzed',function(){

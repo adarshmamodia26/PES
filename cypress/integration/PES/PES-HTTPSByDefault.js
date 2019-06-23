@@ -18,6 +18,12 @@ before(function() {
      
 })*/
 
+before(function() {
+     cy.log('runs once before all tests in the block')
+     cy.analyze()
+  })
+
+
 it('Verify that HTTPSByDefault is implemented',function(){
 //reading Symbol values of HTTPSByDefault
 cy.scrollTo(0,100)

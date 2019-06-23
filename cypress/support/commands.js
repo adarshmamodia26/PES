@@ -24,10 +24,10 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-before(function() {
+/*before(function() {
      cy.log('runs once before all tests in the block')
      cy.analyze()
-  })
+  })*/
 
 /*beforeEach(function() {
    cy.log('runs before each test in the block')
