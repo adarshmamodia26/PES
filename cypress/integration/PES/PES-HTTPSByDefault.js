@@ -1,7 +1,7 @@
 // JavaScript Document
-describe('PES-Content-Verification', function(){
+describe('PES-HTTPSByDefault-Content-Verification', function(){
 
-before(function() {
+/*before(function() {
      cy.log('runs once before all tests in the block')
      
      //opening analyzer website
@@ -16,7 +16,7 @@ before(function() {
      cy.wait(50000)
      })
      
-})
+})*/
 
 it('Verify that HTTPSByDefault is implemented',function(){
 //reading Symbol values of HTTPSByDefault
