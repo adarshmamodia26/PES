@@ -36,10 +36,15 @@ it('Verify that HTTPSByDefault has dynamic content',function(){
 cy.get('#https > div > div.left-part > div.ng-star-inserted').should('have.descendants','p')
 //verify a table having dynamic data
 cy.get('#https > div > div.left-part > div.ng-star-inserted').should('have.descendants','table')
-cy.get('#https > div > div.left-part > div.ng-star-inserted > table > tbody > tr').should('have.length',3)
+cy.readFile('Data/PES-HTTPSByDefault.json').its('ReportsTitlesCount').as('ReportsTitlesCount').then((ReportsTitlesCount)=>{
+cy.get('#https > div > div.left-part > div.ng-star-inserted > table > tbody > tr').should('have.length',ReportsTitlesCount)
+})
 //verify that it has links having more info
 cy.get('#https > div > div.left-part > div.ng-star-inserted').should('have.descendants','ul')
-cy.get('#https > div > div.left-part > div.ng-star-inserted > ul> li').should('have.length',4)
+
+cy.readFile('Data/PES-HTTPSByDefault.json').its('TLS-SSL-SitesLinks').as('TLSSSLSitesLinks').then((TLSSSLSitesLinks)=>{
+cy.get('#https > div > div.left-part > div.ng-star-inserted > ul> li').should('have.length',TLSSSLSitesLinks)
+})
 })
 
 it('Verify that HTTPSByDefault has How to implement section',function(){

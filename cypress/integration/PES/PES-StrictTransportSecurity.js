@@ -37,8 +37,16 @@ it('Verify that StrictTransportSecurity has dynamic content',function(){
 cy.get('#hsts > div > div.left-part > div.ng-star-inserted').should('have.descendants','p')
 //verify a table having dynamic data
 cy.get('#hsts > div > div.left-part > div.ng-star-inserted').should('have.descendants','table')
-cy.get('#hsts > div > div.left-part > div.ng-star-inserted > table > tbody > tr').should('have.length',3)
-
+cy.readFile('Data/PES-StrictTransportSecurity.json').its('STS-Attributes').as('STSAttributes').then((STSAttributes)=>{
+cy.get('#hsts > div > div.left-part > div.ng-star-inserted > table > tbody > tr').should('have.length',STSAttributes)
+})
+//verify that some text in paragraph
+cy.get('#hsts > div > div.left-part > div:nth-child(2)').should('have.descendants','p')
+//verify a table having dynamic data
+cy.get('#hsts > div > div.left-part > div:nth-child(2)').should('have.descendants','table')
+cy.readFile('Data/PES-StrictTransportSecurity.json').its('STS-Attributes').as('STSAttributes').then((STSAttributes)=>{
+cy.get('#hsts > div > div.left-part > div:nth-child(2) > table > tbody > tr').should('have.length',STSAttributes)
+})
 })
 
 it('Verify that StrictTransportSecurity has How to implement section',function(){
