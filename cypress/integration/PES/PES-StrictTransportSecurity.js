@@ -29,23 +29,23 @@ it('Verify that StrictTransportSecurity is implemented',function(){
 //reading Symbol values of StrictTransportSecurity
 cy.scrollTo(0,350)
 cy.readFile('Data/PES-StrictTransportSecurity.json').its('StrictTransportSecurityContent-Symbol').as('StrictTransportSecurityContentSymbol').then((StrictTransportSecurityContent)=>{
-cy.get('#hsts > div > div.main-heading > h3 > i.fa.fa-times.failure.ng-star-inserted').should('have.css','color',StrictTransportSecurityContent)
+cy.get('#hsts > div > div.main-heading > h3 > span > i').should('have.css','color',StrictTransportSecurityContent)
 })})
 
 it('Verify that StrictTransportSecurity has dynamic content',function(){
 //verify that some text in paragraph
-cy.get('#hsts > div > div.left-part > div.ng-star-inserted').should('have.descendants','p')
+cy.get('#hsts > .full-content > .left-part > :nth-child(1)').should('have.descendants','p')
 //verify a table having dynamic data
-cy.get('#hsts > div > div.left-part > div.ng-star-inserted').should('have.descendants','table')
+cy.get('#hsts > .full-content > .left-part > :nth-child(1)').should('have.descendants','table')
 cy.readFile('Data/PES-StrictTransportSecurity.json').its('STS-Attributes').as('STSAttributes').then((STSAttributes)=>{
-cy.get('#hsts > div > div.left-part > div.ng-star-inserted > table > tbody > tr').should('have.length',STSAttributes)
+cy.get('#hsts > .full-content > .left-part > :nth-child(1) > table > tbody > tr').should('have.length',STSAttributes)
 })
 //verify that some text in paragraph
-cy.get('#hsts > div > div.left-part > div:nth-child(2)').should('have.descendants','p')
+cy.get('#hsts > .full-content > .left-part > :nth-child(2)').should('have.descendants','p')
 //verify a table having dynamic data
-cy.get('#hsts > div > div.left-part > div:nth-child(2)').should('have.descendants','table')
+cy.get('#hsts > .full-content > .left-part > :nth-child(2)').should('have.descendants','table')
 cy.readFile('Data/PES-StrictTransportSecurity.json').its('STS-Attributes').as('STSAttributes').then((STSAttributes)=>{
-cy.get('#hsts > div > div.left-part > div:nth-child(2) > table > tbody > tr').should('have.length',STSAttributes)
+cy.get('#hsts > .full-content > .left-part > :nth-child(2) > table > tbody > tr').should('have.length',STSAttributes)
 })
 })
 
