@@ -1,5 +1,5 @@
 // JavaScript Document
-describe('PES-ContentSecurityPolicy-Content-Verification', function(){
+describe('PES-ReferrerPolicy-Content-Verification', function(){
 /*
 before(function() {
      cy.log('runs once before all tests in the block')
