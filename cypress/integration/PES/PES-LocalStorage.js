@@ -1,5 +1,5 @@
 // JavaScript Document
-describe('PES-Cookies-Content-Verification', function(){
+describe('PES-LocalStorage-Content-Verification', function(){
     /*
     before(function() {
          cy.log('runs once before all tests in the block')
@@ -24,23 +24,23 @@ describe('PES-Cookies-Content-Verification', function(){
       })
     
 
-    it('Verify that Cookies has dynamic content',function(){
+    /*it('Verify that Cookies has dynamic content',function(){
     //verify it have dynamic data
-    cy.scrollTo(0,1550)
-    cy.readFile('Data/PES-Cookies.json').its('CookiesPropertiesCount').as('CookiesPropertiesCount').then((CookiesPropertiesCount)=>{
+    cy.readFile('Data/PES-LocalStorage.json').its('CookiesPropertiesCount').as('CookiesPropertiesCount').then((CookiesPropertiesCount)=>{
     cy.get('#cookies > div > div.left-part.full-left-part > p').should('have.length',CookiesPropertiesCount)
     })
-    })
+    })*/
     
     /*it('Verify that Cookies has How to implement section',function(){
     //verify that it has how to implement section
     cy.get('#mat-expansion-panel-header-5 > span.mat-content > mat-panel-title').should('have.text',' How to implement ')
     
-    })
-    
-    it('Verify that Details about Cookies exists in right part',function(){
-    cy.get('#headers > div > div.right-part').should('be.visible')
     })*/
+    
+    it('Verify that Details about LocalStorage exists in right part',function(){
+    cy.scrollTo(0,1650)
+    cy.get('#localstorage > div > div.right-part').should('be.visible')
+    })
     
     
     })
