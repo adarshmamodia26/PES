@@ -24,24 +24,23 @@ describe('PES-HTTPHeaders-Content-Verification', function(){
       })
     
 
-    it('Verify that HTTPHeaders has dynamic content',function(){
-    //verify a table having dynamic data
-    cy.scrollTo(0,1300)
-    cy.get('#headers > div > div.left-part').should('have.descendants','table')
-    cy.readFile('Data/PES-HTTPHeaders.json').its('HeadersCount').as('HeadersCount').then((HeadersCount)=>{
-    cy.get('#headers > div > div.left-part > table > tbody > tr').should('have.length',HeadersCount)
+    it('Verify that Cookies has dynamic content',function(){
+    //verify it have dynamic data
+    cy.scrollTo(0,1550)
+    cy.readFile('Data/PES-Cookies.json').its('CookiesPropertiesCount').as('CookiesPropertiesCount').then((CookiesPropertiesCount)=>{
+    cy.get('#cookies > div > div.left-part.full-left-part > p').should('have.length',CookiesPropertiesCount)
     })
     })
     
-    it('Verify that HTTPHeaders has How to implement section',function(){
+    /*it('Verify that Cookies has How to implement section',function(){
     //verify that it has how to implement section
     cy.get('#mat-expansion-panel-header-5 > span.mat-content > mat-panel-title').should('have.text',' How to implement ')
     
     })
     
-    it('Verify that Details about HTTPHeaders exists in right part',function(){
+    it('Verify that Details about Cookies exists in right part',function(){
     cy.get('#headers > div > div.right-part').should('be.visible')
-    })
+    })*/
     
     
     })
