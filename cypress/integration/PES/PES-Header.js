@@ -36,7 +36,7 @@ describe('PES-Header-Verification',function(){
 
 
 it('Data matching of Results For',function(){
-cy.get('#website-Info > div > div.title > div.title-left > h2 > span').should('have.text',this.urlanalyze)
+cy.get('#website-Info > div > div.title > div.title-left > h2 > span').should('contain',this.urlanalyze)
 })
 
 
@@ -86,14 +86,14 @@ it('Data matching for Cookies',function(){
 
 //reading  value of Cookies
 cy.readFile('Data/PES-Header.json').its('Cookies').as('Cookies').then((Cookies)=>{
-cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(4) > span.check-list').should('contain',Cookies)
+cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(4) > span.check-list').should('have.text',Cookies)
 })})
 
 it('Data matching for Third-Party Request',function(){
 
 //reading  value of Third-Party Request
 cy.readFile('Data/PES-Header.json').its('Third-PartyRequests').as('ThirdPartyRequests').then((ThirdPartyRequests)=>{
-cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(5) > span.check-list.ng-star-inserted').should('contain',ThirdPartyRequests)
+cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(5) > span.check-list.ng-star-inserted').should('have.text',ThirdPartyRequests)
 })})
 
 it('Data matching for Server Location=>FlagImageURL',function(){
@@ -107,14 +107,14 @@ it('Data matching for Server Location=>CountryName',function(){
 
 //reading  Country of Server Location
 cy.readFile('Data/PES-Header.json').its('ServerLocation-Country').as('ServerLocationCountry').then((ServerLocationCountry)=>{
-cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(6) > span.check-list > label').should('contain',ServerLocationCountry)
+cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(6) > span.check-list > label').should('have.text',ServerLocationCountry)
 })})
 
 it('Data matching for Server Location=>IP',function(){
 
 //reading  IP of Server Location
 cy.readFile('Data/PES-Header.json').its('ServerLocation-IP').as('ServerLocationIP').then((ServerLocationIP)=>{
-cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(6) > span.check-list').should('contain',ServerLocationIP)
+cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(6) > span.check-list').should('have.text',ServerLocationIP)
 })})
 
 it('Verifying Lookup is a link',function(){
@@ -130,7 +130,7 @@ cy.get('#website-Info > div > div.title > div.title-right > span:nth-child(1)').
 it('Data matching for Date & Time',function(){
 //reading  Date & Time with Timezone
 cy.readFile('Data/PES-Header.json').its('DateTime-Zone').as('DateTimeZone').then((DateTimeZone)=>{
-cy.get('#website-Info > div > div.title > div.title-right > span:nth-child(2)').should('contain',DateTimeZone)
+cy.get('#website-Info > div > div.title > div.title-right > span:nth-child(2)').should('have.text',DateTimeZone)
 })})
 
 it('Data matching for Checked URL',function(){
