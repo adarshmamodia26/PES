@@ -1,8 +1,4 @@
 {
-
-    "SubResourceInttegrityContent-Symbol":"rgb(0, 217, 0)",
-    "SubResourceInttegrityPolicy-Checks":"11"
-    
-    
-    }
-    
+  "SubResourceIntegrityContent-Symbol": "rgb(0, 217, 0)",
+  "SubResourceIntegrityPolicy-Checks": 2
+}

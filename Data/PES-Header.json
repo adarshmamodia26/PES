@@ -1,15 +1,14 @@
 {
-
-"HTTPSByDefault-Symbol":"rgb(0, 217, 0)",
-"HTTPSByDefault-Value":"Yes",
-"ContentSecurityPolicy-Symbol":"rgb(0, 217, 0)",
-"ContentSecurityPolicy-Value":"Good policy",
-"ReferrerPolicy-Symbol":"rgb(0, 217, 0)",
-"ReferrerPolicy-Value":"Referrers not leaked",
-"Cookies":"0",
-"Third-PartyRequests":"0",
-"ServerLocation-FlagImageUrl":"http://pes.habilelab.com/fr.f8952213641bba462c73.svg",
-"ServerLocation-Country":"France",
-"ServerLocation-IP":"51.15.208.12",
-"DateTime-Zone":"2019-06-21 06:47:10 Etc/UTC"
+  "HTTPSByDefault-Symbol": "rgb(0, 217, 0)",
+  "HTTPSByDefault-Value": "Yes",
+  "ContentSecurityPolicy-Symbol": "rgb(0, 217, 0)",
+  "ContentSecurityPolicy-Value": "Good policy",
+  "ReferrerPolicy-Symbol": "rgb(0, 217, 0)",
+  "ReferrerPolicy-Value": "Referrers not leaked",
+  "Cookies": "0",
+  "Third-PartyRequests": "0",
+  "ServerLocation-FlagImageUrl": "url(\"https://webbkoll.dataskydd.net/flags/4x3/fr-b1156355de9691d768df19a8a2b44da4.svg?vsn=d\")",
+  "ServerLocation-Country": "France",
+  "ServerLocation-IP": "51.15.208.12Look up",
+  "DateTime-Zone": "2019-07-12 10:01:35 Etc/UTC"
 }

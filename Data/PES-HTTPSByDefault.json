@@ -1,8 +1,5 @@
 {
-
-"HTTPSByDefaultContent-Symbol":"rgb(0, 217, 0)",
-"ReportsTitlesCount":"3",
-"TLS-SSL-SitesLinks":"4"
-
-
+  "HTTPSByDefaultContent-Symbol": "rgb(0, 217, 0)",
+  "ReportsTitlesCount": 3,
+  "TLS-SSL-SitesLinks": 4
 }

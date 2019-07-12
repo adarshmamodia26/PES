@@ -100,7 +100,7 @@ it('Data matching for Server Location=>FlagImageURL',function(){
 
 //reading  FlagImageUrl of Server Location
 cy.readFile('Data/PES-Header.json').its('ServerLocation-FlagImageUrl').as('ServerLocationFlagImageUrl').then((ServerLocationFlagImageUrl)=>{
-cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(6) > span.check-list > label > flag-icon > span').should('have.css','background-image',"url("+'"'+ServerLocationFlagImageUrl+'"'+")")
+cy.get('#website-Info > div > div.result-summary > div.summary > ul > li:nth-child(6) > span.check-list > label > flag-icon > span').should('have.css','background-image',ServerLocationFlagImageUrl)
 })})
 
 it('Data matching for Server Location=>CountryName',function(){

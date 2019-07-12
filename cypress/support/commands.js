@@ -51,4 +51,18 @@ Cypress.Commands.add('analyze',function(){
      cy.get('body > app-root > div > app-home > div > form > mat-form-field > div > div.mat-form-field-flex > div > button >    span').click()
      cy.wait(50000)
      })
-})    
+})   
+
+Cypress.Commands.add('webbkollanalyze',function(){
+  //opening analyzer website
+     cy.readFile('Data/PES-Access.json').its('WEBBKOLL-url').as('WEBBKOLLurl').then((WEBBKOLLurl)=>{
+     cy.visit(WEBBKOLLurl)
+     })
+     
+     //Fetching website data which will be analysed
+     cy.readFile('Data/PES-Access.json').its('url-analyze').as('urlanalyze').then((urlanalyze)=>{
+     cy.get('body > main > div > section > form > input[type=search]').type(urlanalyze).should('have.value',urlanalyze)
+     cy.get('body > main > div > section > form > button').click()
+     cy.wait(25000)
+     })
+})   

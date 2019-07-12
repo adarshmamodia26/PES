@@ -27,8 +27,8 @@ describe('PES-SubResourceIntegrity-Content-Verification', function(){
     it('Verify that SubResourceIntegrity is implemented',function(){
     //reading Symbol values of SubResourceIntegrity
     cy.scrollTo(0,1100)
-    cy.readFile('Data/PES-SubResourceIntegrity.json').its('SubResourceInttegrityContent-Symbol').as('SubResourceInttegrityContentSymbol').then((SubResourceInttegrityContentSymbol)=>{
-    cy.get('#sri > div > div.main-heading > h3 > i.fa.fa-times.success').should('have.css','color',SubResourceInttegrityContentSymbol)
+    cy.readFile('Data/PES-SubResourceIntegrity.json').its('SubResourceIntegrityContent-Symbol').as('SubResourceIntegrityContentSymbol').then((SubResourceIntegrityContentSymbol)=>{
+    cy.get('#sri > div > div.main-heading > h3 > i.fa.fa-times.success').should('have.css','color',SubResourceIntegrityContentSymbol)
     })})
     
     it('Verify that SubResourceIntegrity has dynamic content',function(){
