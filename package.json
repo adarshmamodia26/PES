@@ -1,0 +1,21 @@
+{
+  "name": "pes-cypress-test",
+  "version": "1.0.0",
+  "description": "It is being used for automating pes project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^3.4.1"
+  },
+  "scripts": {
+    "cypress-open" : "./node_modules/.bin/cypress open",
+    "cypress-run"  : "./node_modules/.bin/cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://adarshmamodia@bitbucket.org/ucpes/pes-e2e.git"
+  },
+  "author": "Adarsh Mamodia",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/ucpes/pes-e2e#readme"
+}
